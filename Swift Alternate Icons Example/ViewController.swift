@@ -14,7 +14,7 @@ class ViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath {
         case [0,1]: changeIcon(name: "B") // Change App Icon to B.
-        case [0,2]: changeIcon(name: "C")
+        case [0,2]: changeIcon(name: "C") // Change App Icon to C.
         default: changeIcon(name: nil) //Set the icon name to nil, it will display its primary icon.
         }
     }
