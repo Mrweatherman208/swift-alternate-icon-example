@@ -15,18 +15,18 @@ class ViewController: UITableViewController {
         switch indexPath {
         case [0,1]: changeIcon(name: "B") // Change App Icon to B.
         case [0,2]: changeIcon(name: "C") // Change App Icon to C.
-        default: changeIcon(name: nil) //Set the icon name to nil, it will display its primary icon.
+        default: changeIcon(name: nil) // Set the App Icon back to the default.
         }
     }
     
     func changeIcon(name: String?) {
-        //Check if the app supports alternating icons
+        // Check if the app supports alternating icons
         guard UIApplication.shared.supportsAlternateIcons else {
             return;
         }
-        //Change the icon to a specific image with given name
+        // Change the icon to a specific image with given name
         UIApplication.shared.setAlternateIconName(name) { (error) in
-            //After app icon changed, print our error or success message
+            // After app icon changed, print our error or success message
             if error != nil {
                 print(error?.localizedDescription ?? "App Icon Error")
             }
